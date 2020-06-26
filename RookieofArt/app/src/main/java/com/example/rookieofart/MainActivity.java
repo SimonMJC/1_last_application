@@ -41,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-               //setting Activity로 이
+               //setting Activity로 이동
         ImageButton setting = (ImageButton) findViewById(R.id.setting);
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Setting.class);
+                Intent intent = new Intent(getApplicationContext(), BioProfile.class);
                 startActivity(intent);
             }
         });

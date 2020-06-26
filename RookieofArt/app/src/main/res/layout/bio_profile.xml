@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CECECE"
+    >
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="아이콘을 클릭하여 \n 프로필 사진을 등록하세요!"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/profile_2"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:src="@drawable/profi"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="load"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력하세요!"
+        android:gravity="top"
+/>
+
+
+</LinearLayout>
