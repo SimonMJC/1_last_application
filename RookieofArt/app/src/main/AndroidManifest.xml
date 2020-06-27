@@ -24,6 +24,10 @@
         <activity android:name=".PieceDetail">
         </activity>
         <activity android:name=".BioProfile"/>
+        <activity android:name=".GallWeb">
+        </activity>
+        <activity android:name=".GallWeb_2">
+        </activity>
     </application>
 
 </manifest>

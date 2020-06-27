@@ -33,14 +33,20 @@ public class MainActivity extends AppCompatActivity {
         newsImageView1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://www.artsum.co.kr/contest_detail.php?num=1699"));
+                Intent intent = new Intent(getApplicationContext(), GallWeb.class);
                 startActivity(intent);
             }
         });
 
+        //광고창 배너 클릭 시 해당 링크로 이동
+        final ImageView newsImageView2 = findViewById(R.id.news2);
+        newsImageView2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), GallWeb_2.class);
+                startActivity(intent);
+            }
+        });
                //setting Activity로 이동
         ImageButton setting = (ImageButton) findViewById(R.id.setting);
         setting.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<ArtInfo> artInfos = new ArrayList<>();
         for (int i = 0; i < itemList.size(); i++) {
 
-            ArtInfo artInfo = new ArtInfo("Title:" + i, "Artist" + i,
+            ArtInfo artInfo = new ArtInfo("작품명: " + i, "작가: " + i,
                     new BitmapDrawable(getResources(), BitmapFactory.decodeResource(getResources(), itemList.get(i), option)));
 
             artInfos.add(artInfo);

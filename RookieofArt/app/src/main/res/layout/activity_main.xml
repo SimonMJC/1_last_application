@@ -37,28 +37,29 @@
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="horizontal" >
+
                <ImageView
                    android:id="@+id/news1"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
-                   android:src="@drawable/news"
                    android:layout_marginTop="15dp"
-
+                   android:src="@drawable/news"
                    />
+
                <ImageView
                    android:id="@+id/news2"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
-               android:src="@drawable/news"
+               android:src="@drawable/news2"
                android:layout_marginTop="15dp"
                />
-               <ImageView
-                   android:id="@+id/news3"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:src="@drawable/news"
-                   android:layout_marginTop="20dp"
-                   />
+<!--               <ImageView-->
+<!--                   android:id="@+id/news3"-->
+<!--                   android:layout_width="wrap_content"-->
+<!--                   android:layout_height="match_parent"-->
+<!--                   android:src="@drawable/news"-->
+<!--                   android:layout_marginTop="20dp"-->
+<!--                   />-->
            </LinearLayout>
        </HorizontalScrollView>
 
