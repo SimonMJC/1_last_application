@@ -11,11 +11,8 @@ public class ArtInfo {
     BitmapDrawable content;
 
     public ArtInfo(String title, String artist, BitmapDrawable content){
-
         this.artist = artist;
         this.title = title;
         this.content = content;
-
-
     }
 }

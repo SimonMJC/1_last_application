@@ -7,12 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#CECECE">
-
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">
-
        <ImageButton
            android:id="@+id/setting"
            android:layout_width="40dp"
@@ -20,15 +18,11 @@
            android:background="@drawable/setting"
            android:layout_marginTop="15dp"
            android:layout_marginBottom="15dp"/>
-
        <androidx.recyclerview.widget.RecyclerView
            android:layout_width="match_parent"
            android:layout_height="450dp"
            android:id="@+id/recycler"
            android:scrollbars="horizontal"/>
-
-
-
        <HorizontalScrollView
            android:layout_marginTop="15dp"
            android:layout_width="match_parent"
@@ -37,7 +31,6 @@
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="horizontal" >
-
                <ImageView
                    android:id="@+id/news1"
                    android:layout_width="match_parent"
@@ -45,7 +38,6 @@
                    android:layout_marginTop="15dp"
                    android:src="@drawable/news"
                    />
-
                <ImageView
                    android:id="@+id/news2"
                android:layout_width="match_parent"
@@ -53,19 +45,7 @@
                android:src="@drawable/news2"
                android:layout_marginTop="15dp"
                />
-<!--               <ImageView-->
-<!--                   android:id="@+id/news3"-->
-<!--                   android:layout_width="wrap_content"-->
-<!--                   android:layout_height="match_parent"-->
-<!--                   android:src="@drawable/news"-->
-<!--                   android:layout_marginTop="20dp"-->
-<!--                   />-->
            </LinearLayout>
        </HorizontalScrollView>
-
-
-
-
    </LinearLayout>
-
 </RelativeLayout>

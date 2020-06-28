@@ -44,9 +44,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
        holder.imageView.setImageDrawable(itemList.get(position).content);
-//    holder.textview.setText(item);
-//    holder.textview.setTag(item);
-//    holder.textview.setOnClickListener(onClickItem);
     }
 
     @Override
@@ -55,8 +52,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-//        public TextView textview;
-
 
         public ImageView imageView;
         public ViewHolder(View itemView){
@@ -65,15 +60,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             imageView.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-                    //event
-
-//                    Log.v("Test", itemList.get(getAdapterPosition()).artist);
-//                    Log.v("Test", itemList.get(getAdapterPosition()).title);
                     Intent intent = new Intent(context, PieceDetail.class);
-
                     intent.putExtra("time",getAdapterPosition());
                     context.startActivity(intent);
-//                    Toast.makeText(context)
                 }
             });
         }

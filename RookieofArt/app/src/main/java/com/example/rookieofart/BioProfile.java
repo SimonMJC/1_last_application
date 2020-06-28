@@ -47,7 +47,6 @@ public class BioProfile extends AppCompatActivity {
         delete.setOnClickListener(delete_listener);
 
         imageView = findViewById(R.id.profile_2);
-
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,9 +56,7 @@ public class BioProfile extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
-
     }
-
     View.OnClickListener load_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -73,50 +70,35 @@ public class BioProfile extends AppCompatActivity {
                 bio.setText(new String(data));
                 //화면 아래 간단한 알림 메시지 출력
                 Toast.makeText(getApplicationContext(), "로드 성공", Toast.LENGTH_LONG).show();
-
             }catch (Exception e)
-            {
-                e.printStackTrace();
-            }
+            { e.printStackTrace(); }
             finally {
-                try {
-                    //파일 읽기 성공 여부 상관없이 반드시 스트림 닫기
+                try {//파일 읽기 성공 여부 상관없이 반드시 스트림 닫기
                     if(inputStream != null)
                         inputStream.close();
                 }catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
+                { e.printStackTrace(); }
             }
         }
     };
-
     View.OnClickListener save_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-//Toast.makeText(getApplicationContext(), "저장 버튼 클릭 테스트", Toast.LENGTH_LONG).show();
             //파일 저장 시 이용할 파일 출력 스트림
             FileOutputStream outputStream = null;
             try
-            {
-                outputStream = openFileOutput(fileName, MODE_PRIVATE);
+            { outputStream = openFileOutput(fileName, MODE_PRIVATE);
                 //에디트 박스에 저장된 스트링 데이터를 스트림에 기록함
                 outputStream.write(bio.getText().toString().getBytes());
                 outputStream.close();
-
-                Toast.makeText(getApplicationContext(), "저장 성공", Toast.LENGTH_LONG).show();
-            }
+                Toast.makeText(getApplicationContext(), "저장 성공", Toast.LENGTH_LONG).show(); }
             catch(Exception e)
-            {
-                e.printStackTrace();
-            }
+            { e.printStackTrace(); }
         }
     };
-
     View.OnClickListener delete_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            //Toast.makeText(getApplicationContext(), "삭제 버튼 클릭 테스트", Toast.LENGTH_LONG).show();
             //해당 파일을 디스크 상에서 삭제, true 리턴 시 삭제 성공
             boolean Del = deleteFile(fileName);
             if(Del)
@@ -125,7 +107,6 @@ public class BioProfile extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "메모 삭제 실패", Toast.LENGTH_LONG).show();
         }
     };
-
     //갤러리 불러오기
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

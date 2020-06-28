@@ -19,9 +19,9 @@ public class GallWeb extends AppCompatActivity {
         // 웹뷰 시작
         mWebView = (WebView) findViewById(R.id.webView);
 
-        mWebView.setWebViewClient(new WebViewClient()); // 클릭시 새창 안뜨게
+        mWebView.setWebViewClient(new WebViewClient()); // 클릭시 새창 안뜨도
         mWebSettings = mWebView.getSettings(); //세부 세팅 등록
-        mWebSettings.setJavaScriptEnabled(true); // 웹페이지 자바스클비트 허용 여부
+        mWebSettings.setJavaScriptEnabled(true); // 웹페이지 자바스크립트 허용 여부
         mWebSettings.setSupportMultipleWindows(false); // 새창 띄우기 허용 여부
         mWebSettings.setJavaScriptCanOpenWindowsAutomatically(false); // 자바스크립트 새창 띄우기(멀티뷰) 허용 여부
         mWebSettings.setLoadWithOverviewMode(true); // 메타태그 허용 여부
@@ -33,7 +33,5 @@ public class GallWeb extends AppCompatActivity {
         mWebSettings.setDomStorageEnabled(true); // 로컬저장소 허용 여부
 
         mWebView.loadUrl("https://www.artsum.co.kr/contest_detail.php?num=1699"); // 웹뷰에 표시할 웹사이트 주소, 웹뷰 시작
-//        https://www.artsum.co.kr/contest_detail.php?num=1699
-//        https://www.opengallery.co.kr/exhibition/
     }
 }
